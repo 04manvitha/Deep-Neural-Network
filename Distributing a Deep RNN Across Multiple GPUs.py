@@ -1,3 +1,5 @@
+Distributing a Deep RNN Across Multiple GPUs
+
 # Deep RNN
 import tensorflow as tf
 
