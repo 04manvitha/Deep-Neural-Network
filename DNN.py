@@ -32,3 +32,37 @@ with tf.name_scope("eval"):
  accuracy = tf.reduce_mean(tf.cast(correct, tf.float32))
 init = tf.global_variables_initializer()
 saver = tf.train.Saver()
+
+
+Model Architecture
+
+Model: "sequential_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_5 (Conv2D)           (None, 256, 256, 256)     7168      
+                                                                 
+ max_pooling2d_5 (MaxPooling  (None, 128, 128, 256)    0         
+ 2D)                                                             
+                                                                 
+ conv2d_6 (Conv2D)           (None, 128, 128, 128)     295040    
+                                                                 
+ max_pooling2d_6 (MaxPooling  (None, 64, 64, 128)      0         
+ 2D)                                                             
+                                                                 
+ conv2d_7 (Conv2D)           (None, 64, 64, 64)        73792     
+                                                                 
+ max_pooling2d_7 (MaxPooling  (None, 32, 32, 64)       0         
+ 2D)                                                             
+                                                                 
+ flatten_2 (Flatten)         (None, 65536)             0         
+                                                                 
+ dense_4 (Dense)             (None, 64)                4194368   
+                                                                 
+ dense_5 (Dense)             (None, 10)                650       
+                                                                 
+=================================================================
+Total params: 4,571,018
+Trainable params: 4,571,018
+Non-trainable params: 0
+_________________________________________________________________
